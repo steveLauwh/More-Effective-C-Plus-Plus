@@ -27,3 +27,6 @@ funcPtrArray[0] = reinterpret_cast<FuncPtr>(&doSomething);
 * 数组对象几乎总是会涉及指针的算术运算，所以数组和多态不要混用。
 
 ## 条款4：非必要不提供 default constructor
+
+* 添加无意义的 default constructor，会影响 class 的效率。
+* 如果 class constructor 可以确保对象的所有字段都会被正确地初始化，付出时间代价和空间代价成本便可以免除。
