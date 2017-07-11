@@ -5,3 +5,5 @@
 * [02 操作符(Operator)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/02%20%E6%93%8D%E4%BD%9C%E7%AC%A6(Operator).md)
 
 * [03 异常(Exception)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/03%20%E5%BC%82%E5%B8%B8(Exception).md)
+
+* [04 效率(Efficiency)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/04%20%E6%95%88%E7%8E%87(Efficiency).md)
