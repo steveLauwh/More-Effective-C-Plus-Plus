@@ -37,4 +37,5 @@ public:
 * operator new 只负责分配内存。
 * placement new 一个特殊版本的 operator new，在已分配(并拥有指针)的内存中构造对象。
 * delete 是内建的 delete operator，如 delete ps；先析构 ps 所指对象，又能够释放被该对象占用的内存。
-* 内存释放动作是函数 operator delete 执行
+* 内存释放动作是函数 operator delete 执行。
+* 分配对象数组，`string *ps = new string[10];`。
