@@ -1,6 +1,18 @@
 ## 条款25：将 constructor 和 non-member function 虚化
 
+* technique 技术，idiom 惯用手法，pattern 模式。
+* virtual constructor 是某种函数，视其获得的输入，可产生不同类型的对象。
+* virtual copy constructor 会返回一个指针，指向其调用者(某对象)的一个新副本。
+* non-member functions 的行为虚化：写一个虚函数做实际工作，再写一个什么都不做的非虚函数，只负责调用虚函数。
+
 ## 条款26：限制某个 class 所能产生的对象数量
+
++ 允许零个或一个对象
+  - 将 class 的 constructor 声明为 private。
+  - 全局函数被声明为此 class 的一个 friend。
+  - 全局函数内含一个 static 对象，意思是只有一个对象会被产生出来。
++ 
+  
 
 ## 条款27：要求 (或禁止) 对象产生于 heap 之中
 
