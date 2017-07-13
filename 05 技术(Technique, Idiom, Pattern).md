@@ -9,8 +9,34 @@
 
 + 允许零个或一个对象
   - 将 class 的 constructor 声明为 private。
-  - 全局函数被声明为此 class 的一个 friend。
+  - 全局函数被声明为此 class 的一个 friend，致使 全局函数 不受 private constructor 的约束。
   - 全局函数内含一个 static 对象，意思是只有一个对象会被产生出来。
+
+```
+class PrintJob;
+class Printer {
+public:
+  void submitJob(const PrintJob& job);
+  void reset();
+  void preformSelfTest();
+  ...
+  friend Printer& thePrinter();
+
+private:
+  Printer();
+  Printer(const Printer& rhs);
+  ...
+};
+
+Printer& thePrinter()
+{
+  static Printer p;
+  return p;
+}
+```
+
++ 不同的对象构造状态
+
 + 
   
 
