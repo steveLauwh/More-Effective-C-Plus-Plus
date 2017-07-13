@@ -44,7 +44,9 @@ Printer& thePrinter()
 ## 条款27：要求 (或禁止) 对象产生于 heap 之中
 
 * 要求对象产生于 heap 之中，让 destructor 成为 private，而 constructor 仍为 public。
-* 判断某个对象是否位于 heap 内
+* 判断某个对象是否位于 heap 内。
+* 栈 stack 高地址往低地址成长，堆 heap 由低地址往高地址成长。
+* static 对象在程序执行期间只初始化一次。
 
 ## 条款28：Smart Pointer (智能指针)
 
