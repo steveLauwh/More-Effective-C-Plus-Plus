@@ -43,6 +43,9 @@ Printer& thePrinter()
 
 ## 条款27：要求 (或禁止) 对象产生于 heap 之中
 
+* 要求对象产生于 heap 之中，让 destructor 成为 private，而 constructor 仍为 public。
+* 判断某个对象是否位于 heap 内
+
 ## 条款28：Smart Pointer (智能指针)
 
 ## 条款29：Reference counting (引用计数)
