@@ -47,11 +47,43 @@ Printer& thePrinter()
 * 判断某个对象是否位于 heap 内。
 * 栈 stack 高地址往低地址成长，堆 heap 由低地址往高地址成长。
 * static 对象在程序执行期间只初始化一次。
+* 禁止对象产生于 heap 之中
+```
+class UPNumber {
+private:
+  static void *operator new(size_t size);
+  static void operator delete(void *ptr);
+};
+```
+## 条款28：Smart Pointer (智能指针) (*)
 
-## 条款28：Smart Pointer (智能指针)
+* smart pointer 取代 C++ 的 dumb pointer(内建指针) ：构造和析构；复制和赋值；解引。
+* smart pointer 的构造、赋值、析构。
+* 考虑 C++ 标准程序库提供的 auto_ptr template。
+* 实现 Dereferencing Operator (解引操作符)：`operator*` 和 `operator->`
+* 测试 smart pointer 是否为 null。
+  `operator void*()`
+* 将 smart pointer 转换为 dumb pointer。
+* 不要提供对 dumb pointer 的隐式转换操作符。
+* smart pointer 和 “与继承有关的” 类型转换。
+* smart pointer 与 const。
 
 ## 条款29：Reference counting (引用计数)
 
-## 条款30：Proxy class (替身类、代理类)
+* reference counting 允许多个等值对象共享同一实值。
+* copy-on-write (写时才复制)。
+* 一个 reference counting 基类。
+* 自动操作 reference count 引用次数。
+* 将 reference counting 加到既有的 class 身上。
+* 相对多数的对象共享相对少量的实值。
+* 对象实值的产生或销毁成很高，或是它们使用许多内存。
 
-## 条款31：让函数根据一个以上的对象类型来决定如何虚化
+## 条款30：Proxy class (替身类、代理类) (*)
+
+* 区分 operator[] 的读写操作
+* proxies 难以完全取代真正对象的最后一个原因在于隐式类型转换。
+
+## 条款31：让函数根据一个以上的对象类型来决定如何虚化 (*)
+
+* 虚函数 + RTTI (运行时期类型辨识)
+* 使用 “非成员函数” 的碰撞处理函数
