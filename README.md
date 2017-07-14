@@ -9,3 +9,5 @@
 * [04 效率(Efficiency)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/04%20%E6%95%88%E7%8E%87(Efficiency).md)
 
 * [05 技术(Technique, Idiom, Pattern)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/05%20%E6%8A%80%E6%9C%AF(Technique%2C%20Idiom%2C%20Pattern).md)
+
+* [06 杂项讨论(Miscellany)](https://github.com/steveLauwh/More-Effective-C-Plus-Plus/blob/master/06%20%E6%9D%82%E9%A1%B9%E8%AE%A8%E8%AE%BA(Miscellany).md)
