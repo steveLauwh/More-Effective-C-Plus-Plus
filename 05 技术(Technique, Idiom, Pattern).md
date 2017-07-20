@@ -12,7 +12,7 @@
   - 全局函数被声明为此 class 的一个 friend，致使 全局函数 不受 private constructor 的约束。
   - 全局函数内含一个 static 对象，意思是只有一个对象会被产生出来。
 
-```
+```cpp
 class PrintJob;
 class Printer {
 public:
@@ -48,7 +48,7 @@ Printer& thePrinter()
 * 栈 stack 高地址往低地址成长，堆 heap 由低地址往高地址成长。
 * static 对象在程序执行期间只初始化一次。
 * 禁止对象产生于 heap 之中
-```
+```cpp
 class UPNumber {
 private:
   static void *operator new(size_t size);
