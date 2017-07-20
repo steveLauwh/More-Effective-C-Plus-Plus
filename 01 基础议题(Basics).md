@@ -13,7 +13,7 @@
 * dynamic_cast<type>(expression)        用来执行继承体系中“安全的向下转型或跨系转型动作”
 * reinterpret_cast<type>(expression)    与编译平台息息相关，不具移植性，最常用用途是转换“函数指针”类型
 
-```
+```cpp
 typedef void (*FuncPtr)();
 FuncPtr funcPtrArray[10];
 
