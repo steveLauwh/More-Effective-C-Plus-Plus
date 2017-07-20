@@ -1,7 +1,7 @@
 ## 条款9：利用 destructor 避免泄漏资源
 
 * C++ 标准程序库提供一个名为 auto_ptr 的 class template，auto_ptr destructor 采用 “单一对象” 形式的 delete，所以不适合取代数组对象的指针。
-```
+```cpp
 template <class T>
 class auto_ptr {
 public:
@@ -11,7 +11,7 @@ private:
   T *ptr;
 };
 ```
-```
+```cpp
 void processAdoptions(istream& dataSource)
 {
   while (dataSource) {
