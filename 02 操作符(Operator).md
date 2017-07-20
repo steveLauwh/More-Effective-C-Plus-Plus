@@ -1,7 +1,7 @@
 ## 条款5：对定制的 “类型转换函数” 保存警觉
 
 * 隐式类型转换操作符，关键词 operator 之后加上一个类型名称。
-```
+```cpp
 class Rational {
 public:
   operator double() const;
@@ -14,7 +14,7 @@ public:
 
 * 后置式有一个 int 自变量，并且在它被调用时，编译器默默地为该 int 指定一个 0 值。
 * 前置式返回一个 reference，后置式返回一个 const 对象。
-```
+```cpp
 class UPInt {
 public:
   UPInt& operator++();          // 前置式++
