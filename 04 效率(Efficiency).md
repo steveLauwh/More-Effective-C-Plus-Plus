@@ -27,7 +27,7 @@
 
 * 返回所谓的 “constructor argument” 以取代对象；
 ```cpp
-inline cosnt Rational operator*(const Rational& lhs, const Rational& rhs)
+inline const Rational operator*(const Rational& lhs, const Rational& rhs)
 {
   return Rational(lhs.numerator() * rhs.numerator(), lhs.denominator() * rhs.denominator());
 }
